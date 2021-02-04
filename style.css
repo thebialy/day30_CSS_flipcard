@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Oswald', sans-serif;
+    background-image: url(https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1087&q=80);
   }
   
 .flip-card {
@@ -9,6 +10,7 @@ body {
     width: 300px;
     height: 300px;
     perspective: 1000px;
+    margin: 325px;
 }
   
 .flip-card-inner {
@@ -27,7 +29,20 @@ body {
   }
   
   .flip-card-back {
-    background-color: #2980b9;
-    color: white;
+    background-color: #6b3074;
+    color: #d8e0bb;
     transform: rotateY(180deg);
   }
+
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
